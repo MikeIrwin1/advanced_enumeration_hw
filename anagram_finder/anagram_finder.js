@@ -14,11 +14,15 @@ AnagramFinder.prototype.parseWord = function (word) {
 };
 
 AnagramFinder.prototype.findAnagrams = function (otherWords) {
-
   let parsedWord = this.parseWord(this.word);
-  let results = [];
+
   return otherWords.filter((word) => {
-    return this.parseWord(word) === parsedWord;
+    if (word === this.word){
+      return
+    }
+    else {
+      return this.parseWord(word) === parsedWord;
+    }
   })
 }
 
