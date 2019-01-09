@@ -7,22 +7,22 @@ describe('AnagramFinder', function () {
     assert.deepStrictEqual(anagramFinder.findAnagrams(['cat', 'dog']), ['cat']);
   });
 
-  xit('should be able to detect a non-anagram', function () {
+  it('should be able to detect a non-anagram', function () {
     const anagramFinder = new AnagramFinder('potato');
     assert.deepStrictEqual(anagramFinder.findAnagrams(['tomato']), []);
   })
 
-  xit('should not detect words with too few letters as an anagram', function () {
+  it('should not detect words with too few letters as an anagram', function () {
     const anagramFinder = new AnagramFinder('good');
     assert.deepStrictEqual(anagramFinder.findAnagrams(['dog']), []);
   });
 
-  xit('should not detect words with too many letters as an anagram', function () {
+  it('should not detect words with too many letters as an anagram', function () {
     const anagramFinder = new AnagramFinder('dog');
     assert.deepStrictEqual(anagramFinder.findAnagrams(['good']), []);
   });
 
-  xit('should detect an anagram regardless of case', function () {
+  it('should detect an anagram regardless of case', function () {
     const anagramFinder = new AnagramFinder('DeduCTionS');
     assert.deepStrictEqual(anagramFinder.findAnagrams(['DiscOUnteD']), ['DiscOUnteD']);
   });

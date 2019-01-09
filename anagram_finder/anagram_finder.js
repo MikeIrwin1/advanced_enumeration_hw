@@ -9,7 +9,8 @@ const AnagramFinder = function (word) {
 // };
 
 AnagramFinder.prototype.parseWord = function (word) {
-  return word.split('').sort().join('');
+  let lowerCase = word.toLowerCase();
+  return lowerCase.split('').sort().join('');
 };
 
 AnagramFinder.prototype.findAnagrams = function (otherWords) {
